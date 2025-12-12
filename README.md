@@ -1,49 +1,49 @@
-##🧠 Brain Tumor Classification Using YOLOv8n with Attention Layers
-🚀 Overview
+# 🧠 Brain Tumor Classification Using YOLOv8n with Attention Layers
+## 🚀 Overview
 
 This project focuses on improving automated brain tumor detection and classification from MRI scans using the YOLOv8 Nano (YOLOv8n) object detection model enhanced with advanced attention mechanisms. Lightweight models like YOLOv8n offer fast inference but often suffer from feature degradation when handling complex medical images. To address this limitation, attention modules are integrated into the YOLOv8n backbone to enhance feature representation while maintaining real-time performance.
 
 The project evaluates the effectiveness of Space–Time Mixing Attention (STMix), Polarized Self-Attention (PSA), and Dual Multi-Scale Attention Network (DMSANet) for detecting and classifying brain tumors.
 
-##🎯 Objectives
+## 🎯 Objectives
 
-Detect & Classify: Multi-class detection of Glioma, Meningioma, and Pituitary tumors from MRI images.
+-**Detect & Classify**: Multi-class detection of Glioma, Meningioma, and Pituitary tumors from MRI images.
 
-Enhance Feature Extraction: Improve spatial, channel, and multi-scale feature learning using attention mechanisms.
+  -**Enhance Feature Extraction**: Improve spatial, channel, and multi-scale feature learning using attention mechanisms.
 
-Compare Performance: Analyze detection accuracy and efficiency of different attention strategies integrated into YOLOv8n.
+  -**Compare Performance**: Analyze detection accuracy and efficiency of different attention strategies integrated into YOLOv8n.
 
-##🏗️ Methodology
+### 🏗️ Methodology
 
 The YOLOv8n model was modified by injecting attention modules after the SPPF layer in the backbone. Each attention mechanism focuses on improving different aspects of feature learning:
 
-🔹 Attention Mechanisms Implemented
 
-1. Space–Time Mixing Attention (STMix)
+
+1. **Space–Time Mixing Attention (STMix)**
 
 -Focus: Preserving spatial context while enhancing feature interactions.
 
--Benefit: Improved detection of tumors with irregular shapes and fine boundaries.
+ -Benefit: Improved detection of tumors with irregular shapes and fine boundaries.
 
-2.Polarized Self-Attention (PSA)
+2.**Polarized Self-Attention (PSA)**
 
--Focus: Separating spatial and channel attention paths for efficient feature refinement.
+  -Focus: Separating spatial and channel attention paths for efficient feature refinement.
 
--Benefit: Enhanced feature selectivity with minimal computational overhead.
+  -Benefit: Enhanced feature selectivity with minimal computational overhead.
 
-3.Dual Multi-Scale Attention Network (DMSANet)
+3.**Dual Multi-Scale Attention Network (DMSANet)**
 
 -Focus: Capturing both global context and local details using multi-scale attention.
 
--Benefit: Robust detection across tumors of varying sizes and appearances.
+  -Benefit: Robust detection across tumors of varying sizes and appearances.
 
-##📊 Dataset
+### Dataset
 
--Source: Medical Image Dataset for Brain Tumor Detection (Kaggle / Figshare)
+-**Source**: Medical Image Dataset for Brain Tumor Detection (Kaggle / Figshare)
 
--Modalities: MRI scans
+**Modalities**: MRI scans
 
--Preprocessing:
+**Preprocessing**:
 
 -Resized to 640 × 640
 
@@ -51,7 +51,7 @@ The YOLOv8n model was modified by injecting attention modules after the SPPF lay
 
 -Split into Train / Validation / Test
 
-#Classes
+### Classes
 
 0 – Glioma
 
@@ -59,13 +59,13 @@ The YOLOv8n model was modified by injecting attention modules after the SPPF lay
 
 2 – Pituitary
 
-##⚙️ Experimental Setup
+###  Experimental Setup
 
--Framework: PyTorch + Ultralytics YOLOv8
+**Framework**: PyTorch + Ultralytics YOLOv8
 
--Hardware: Google Colab (Tesla T4 GPU)
+**Hardware**: Google Colab (Tesla T4 GPU)
 
--Training Parameters:
+**Training Parameters:**
 
 -Epochs: 50
 
@@ -73,7 +73,7 @@ The YOLOv8n model was modified by injecting attention modules after the SPPF lay
 
 -Image Size: 640
 
--Evaluation Metrics:
+**Evaluation Metrics:**
 
 -Precision
 
@@ -83,7 +83,7 @@ The YOLOv8n model was modified by injecting attention modules after the SPPF lay
 
 -mAP@50–95
 
-##📈 Results Summary
+### 📈 Results Summary
 
 All attention-enhanced models outperformed the baseline YOLOv8n.
 
@@ -95,8 +95,8 @@ DMSANet delivered the best multi-scale representation, especially for pituitary 
 
 These results demonstrate that integrating attention mechanisms significantly improves detection accuracy without sacrificing real-time inference speed.
 
-##🚀 Installation & Usage
--Prerequisites
+### 🚀 Installation & Usage
+**Prerequisites**
 
 Python 3.8+
 
@@ -104,8 +104,9 @@ PyTorch
 
 Ultralytics
 
-###Setup
-bash
-git clone https://github.com/Ruchirach/Brain-Tumor-Classification-Using-YOLOv8n-Model-With-Attention-Layers.git
-cd Brain-Tumor-Classification-Using-YOLOv8n-Model-With-Attention-Layers
-pip install ultralytics
+### Setup
+      Clone the repository:
+       bash
+       git clone https://github.com/Ruchirach/Brain-Tumor-Classification-Using-YOLOv8n-Model-With-Attention-Layers.git
+      cd Brain-Tumor-Classification-Using-YOLOv8n-Model-With-Attention-Layers
+      pip install ultralytics
